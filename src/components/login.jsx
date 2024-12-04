@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { users } from "../utils/data";
-
+import MyParticles from "./particles"
 const Login = ({ show, toggleShowLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -24,6 +24,7 @@ const Login = ({ show, toggleShowLogin }) => {
         show ? "flex" : "hidden"
       } bg-opacity-85 w-full h-screen fixed top-0 bottom-0 start-0 end-0 bg-black justify-center items-center`}
     >
+      <MyParticles/>
       <form
         onSubmit={formSubmit}
         className="relative w-[400px] flex gap-5 justify-center bg-black border rounded-md px-5 py-10 border-slate-500 flex-col"
